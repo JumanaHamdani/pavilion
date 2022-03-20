@@ -31,6 +31,10 @@ rhino3dm().then(async (m) => {
   console.log("Loaded rhino3dm.");
   rhino = m; // global
 
+//Set up run and download buttons
+
+const downloadButton = document.getElementById("downloadButton")
+downloadButton.onclick = download 
 
 
   //RhinoCompute.url = getAuth( 'RHINO_COMPUTE_URL' ) // RhinoCompute server url. Use http://localhost:8081 if debugging locally.
@@ -155,6 +159,8 @@ function onSliderChange() {
 }
 
 
+
+
 // BOILERPLATE //
 
 let scene, camera, renderer, controls
@@ -209,3 +215,13 @@ function meshToThreejs(mesh, material) {
   const geometry = loader.parse(mesh.toThreejsJSON());
   return new THREE.Mesh(geometry, material);
 }
+
+//Download button
+function download (){
+  let buffer = doc.toByteArray()
+  let blob = new Blob([ buffer ], { type: "application/octect-stream" })
+  let link = document.createElement('a')
+  link.href = window.URL.createObjectURL(blob)
+  link.download = 'pavilion.3dm'
+  link.click()
+  }
