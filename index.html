@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>RhinoCompute: GH SubD Object</title>
+        <style>
+           
+           body {
+            margin: 0;
+                font-family: MONTSERRAT;
+                font-size: 1rem;
+                text-align: left;
+            }
+            canvas { width: 90%; height: 90%; }
+            input[type=range] { width: 100%; }
+            #container { position: relative; }
+            #container canvas, #overlay { position: absolute; }
+            #overlay { z-index: 1; width: 20vw; height: 100vh; background-color: rgba(138, 138, 138, 0.178); }
+            #overlay div { padding: 5px; }
+            #loader {
+                border: 5px solid hsl(222, 87%, 42%); /* Light grey */
+                border-top: 5px solid #d8d8d8; /* Grey */
+                border-radius: 100%;
+                width: 20px;
+                height: 20px;
+                animation: spin 1s linear infinite;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: 2;
+            }
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            .button {
+            border-radius: 8px;
+            background-color: #083c8a;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 10PX;
+            padding: 15px;
+            width: 150px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+            }
+
+            .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+            }
+
+            .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+            }
+
+            .button:hover span {
+            padding-right: 25px;
+            }
+
+            .button:hover span:after {
+            opacity: 1;
+            right: 0;
+            }   
+            
+            
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #0445a7;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #023075;
+  cursor: pointer;
+}
+        
+        
+        </style>
+    </head>
+    <body>
+        <div id="loader"></div> 
+        <div id="container">
+            <div id="overlay">
+                <div>
+                    <h3>Northen Light Pavilion</h3>
+                </div>
+    
+                 <p>This pavilion is an experimental project based on the quarter-circular truchet pattern creating in between maze-like curvature spaces.</p>
+    
+                <div id="container">
+                    <p id="edge">Size</p>
+                        
+                        <div>
+                            <label for="width">width</label>
+                            <input type="range" id="width" name="width" min="1" max="10" value="8" step="1" class="slider">
+                            <span id="modVal"></span><br>
+                        </div>
+
+                        <div>
+                            <label for="length">length</label>
+                            <input type="range" id="length" name="length" min="1" max="10" value="8" step="1" class="slider">
+                            <p>length: <span id="demoL"></span></p>
+                        </div>
+                    <p id="edge">Pattern</p>
+                        <div>
+                            <label for="seed_value">seed value</label>
+                            <input type="range" id="seed_value" name="seed_value" min="1" max="10" value="8" step="1" step="1" class="slider">
+                        
+                        </div>
+                        </div>
+                        
+                             <button class="button"><span>Download your Pavilion </span></button>
+                        </div>
+                </div>
+
+                   
+        </div>
+        <script type="module" src="script.js"></script>
+
+    </body>
+</html>
