@@ -3,7 +3,7 @@
 
 ## Description
 
-An interactive web-based application to envision a piece of contemporary urban infrastructure that would activate the area around the ice hotel in .The starting point of this experimental passageway pavilion is based on the quarter-circular truchet pattern generating in-between maze-like curvature spaces, controlled by width, length, and pattern.
+An interactive web-based application to envision a piece of contemporary urban infrastructure made of ice blocks that would activate the areas around northern cities in Sweden.The starting point of this experimental pavilion is based on the quarter-circular truchet pattern generating in-between maze-like curvature spaces, controlled by width, length, and pattern.
 
 
 ## Plugins
