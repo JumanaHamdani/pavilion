@@ -42,7 +42,7 @@ downloadButton.onclick = download
 
   //RhinoCompute.url = "http://localhost:8081/"; //if debugging locally.
 
-  RhinoCompute.url = "http://3.127.69.197/"
+  RhinoCompute.url = "http://18.156.1.92/"
   RhinoCompute.apiKey = "macad2022"
 
 
