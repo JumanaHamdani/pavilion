@@ -40,7 +40,11 @@ downloadButton.onclick = download
   //RhinoCompute.url = getAuth( 'RHINO_COMPUTE_URL' ) // RhinoCompute server url. Use http://localhost:8081 if debugging locally.
   //RhinoCompute.apiKey = getAuth( 'RHINO_COMPUTE_KEY' )  // RhinoCompute server api key. Leave blank if debugging locally.
 
-  RhinoCompute.url = "http://localhost:8081/"; //if debugging locally.
+  //RhinoCompute.url = "http://localhost:8081/"; //if debugging locally.
+
+  RhinoCompute.url = "http://3.127.69.197/"
+RhinoCompute.apiKey = "macad2022"
+
 
   // load a grasshopper file!
 
