@@ -1,4 +1,4 @@
-# Northen Light Pavilion
+# Northern Light Pavilion
 
 
 ## Description
